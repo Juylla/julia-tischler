@@ -179,13 +179,25 @@
   <script>
     AOS.init({ once: true });
 
-    // E-Mail kopieren
+     // E-Mail kopieren
     document.getElementById('copy-mail').addEventListener('click', () => {
-      navigator.clipboard.writeText('juliatischler02@gmx.de').then(() => {
-        const label = document.getElementById('copy-label');
+      const email = 'juliatischler02@gmx.de';
+      const label = document.getElementById('copy-label');
+      if (navigator.clipboard) {
+        navigator.clipboard.writeText(email).then(() => {
+          label.textContent = 'Kopiert!';
+          setTimeout(() => label.textContent = email, 2000);
+        });
+      } else {
+        const el = document.createElement('textarea');
+        el.value = email;
+        document.body.appendChild(el);
+        el.select();
+        document.execCommand('copy');
+        document.body.removeChild(el);
         label.textContent = 'Kopiert!';
-        setTimeout(() => label.textContent = 'juliatischler02@gmx.de', 2000);
-      });
+        setTimeout(() => label.textContent = email, 2000);
+      }
     });
 
     // Hamburger Menü
