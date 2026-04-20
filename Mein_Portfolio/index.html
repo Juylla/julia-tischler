@@ -163,15 +163,15 @@
           <rect x="2" y="4" width="20" height="16" rx="2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
           <path d="M2 7l10 7 10-7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
         </svg>
-        <!-- <span id="copy-label">juliatischler02@gmx.de</span> -->
       </button>
+      <span id="copy-label" style="font-size:0.85rem; color:var(--color-text-muted); opacity:0; transition:opacity 0.2s;">E-Mail kopiert!</span>
 
     </div>
   </section>
 
   <!-- ───────────── FOOTER ───────────── -->
   <footer class="footer">
-    <p>&copy; 2026 Julia · Portfolio</p>
+    <p>&copy; 2026 Julia · Portfolio · <a href="datenschutz.html" style="color: var(--color-text-muted);">Datenschutz Impressum</a></p>
   </footer>
 
   <!-- AOS Scroll-Animationen -->
@@ -179,15 +179,16 @@
   <script>
     AOS.init({ once: true });
 
-     // E-Mail kopieren
+    // E-Mail kopieren
     document.getElementById('copy-mail').addEventListener('click', () => {
       const email = 'juliatischler02@gmx.de';
       const label = document.getElementById('copy-label');
+      const show = () => {
+        label.style.opacity = '1';
+        setTimeout(() => { label.style.opacity = '0'; }, 2000);
+      };
       if (navigator.clipboard) {
-        navigator.clipboard.writeText(email).then(() => {
-          label.textContent = 'Kopiert!';
-          setTimeout(() => label.textContent = email, 2000);
-        });
+        navigator.clipboard.writeText(email).then(show);
       } else {
         const el = document.createElement('textarea');
         el.value = email;
@@ -195,8 +196,7 @@
         el.select();
         document.execCommand('copy');
         document.body.removeChild(el);
-        label.textContent = 'Kopiert!';
-        setTimeout(() => label.textContent = email, 2000);
+        show();
       }
     });
 
