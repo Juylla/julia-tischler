@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Julia – Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap" rel="stylesheet" />
+  <!-- Scroll-Animationen -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- ───────────── NAVIGATION ───────────── -->
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="#" class="logo">
+        <img src="images/jt_Logo.svg" alt="jt Logo" height="85" />
+      </a>
+      <ul class="nav-links">
+        <li><a href="#projects">project</a></li>
+        <li><a href="#about">about me</a></li>
+        <li><a href="#contact">contact</a></li>
+      </ul>
+      <!-- Hamburger für Mobile -->
+      <button class="hamburger" id="hamburger" aria-label="Menü öffnen">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ───────────── HERO ───────────── -->
+  <section class="hero">
+    <div class="hero-content" data-aos="fade-up" data-aos-duration="800">
+
+      <!-- Zeile: Heading + Foto nebeneinander -->
+      <div class="hero-top">
+        <h1>Hi, ich bin <img src="images/Unterschrift_julia.png" alt="Julia" class="handwriting-img" /> .</h1>
+        <div class="hero-photo" data-aos="fade-left" data-aos-duration="800" data-aos-delay="150">
+        </div>
+      </div>
+
+      <!-- Beschreibungstext darunter -->
+      <p class="hero-desc">Ich bin ausgebildete Technische Produktdesignerin und angehende Interaktionsgestalterin.</p>
+
+    </div>
+  </section>
+
+  <!-- ───────────── PROJEKTE ───────────── -->
+  <section class="projects" id="projects">
+    <div class="projects-grid">
+
+      <!-- Projekt 1: Nexa -->
+      <a href="nexa.html" class="project-card" data-aos="fade-up" data-aos-duration="600">
+        <div class="project-image">
+          <!-- Ersetze mit deinem Projektbild -->
+          <img src="images/Thumbnail Nexa.jpg" alt="Nexa" />
+        </div>
+        <div class="project-info">
+          <h2>Nexa</h2>
+          <p class="project-sub">Interface Design</p>
+          <div class="tags">
+            <span class="tag">Application</span>
+            <span class="tag">Redesign</span>
+            <span class="tag">UX/UI</span>
+            <span class="tag">Wireframes</span>
+            <span class="tag">Figma</span>
+          </div>
+        </div>
+      </a>
+
+      <!-- Projekt 2: Wocy -->
+      <a href="wocy.html" class="project-card" data-aos="fade-up" data-aos-duration="600" data-aos-delay="100">
+        <div class="project-image">
+          <img src="images/Thumbnail Wocy.png" alt="Wocy" />
+        </div>
+        <div class="project-info">
+          <h2>Wocy</h2>
+          <p class="project-sub">Dein 24/7 Hormontracker</p>
+          <div class="tags">
+            <span class="tag">Invention</span>
+            <span class="tag">App</span>
+            <span class="tag">UI</span>
+            <span class="tag">Product Design</span>
+            <span class="tag">Figma</span>
+          </div>
+        </div>
+      </a>
+
+      <!-- Projekt 3: Hundelieb -->
+      <a href="hundelieb.html" class="project-card" data-aos="fade-up" data-aos-duration="600" data-aos-delay="150">
+        <div class="project-image">
+          <img src="images/Thumbnail Hundelieb.jpg" alt="Hundelieb" />
+        </div>
+        <div class="project-info">
+          <h2>Hundelieb</h2>
+          <p class="project-sub">App Redesign</p>
+          <div class="tags">
+            <span class="tag">Application</span>
+            <span class="tag">Redesign</span>
+            <span class="tag">UX/UI</span>
+            <span class="tag">Wireframes</span>
+            <span class="tag">Figma</span>
+          </div>
+        </div>
+      </a>
+
+      <!-- Projekt 4: Kehrich -->
+      <a href="kehrich.html" class="project-card" data-aos="fade-up" data-aos-duration="600" data-aos-delay="200">
+        <div class="project-image">
+          <img src="images/Thumbnail Kehrich.jpg" alt="Kehrich" />
+        </div>
+        <div class="project-info">
+          <h2>Kehrich</h2>
+          <p class="project-sub">Ersetze eine Alltagsaufgabe</p>
+          <div class="tags">
+            <span class="tag">Mechatronik</span>
+            <span class="tag">Prototyp</span>
+            <span class="tag">Rapid Prototyping</span>
+            <span class="tag">Arduino</span>
+            <span class="tag">Fusion 360</span>
+            <span class="tag">Illustrator</span>
+          </div>
+        </div>
+      </a>
+
+    </div>
+  </section>
+
+  <!-- ───────────── ABOUT ───────────── -->
+  <section class="about" id="about">
+    <div class="about-inner">
+      <div class="about-text" data-aos="fade-up">
+        <h2>About me</h2>
+        <p>
+          Als ausgebildete Technische Produktdesignerin und angehende Interaktionsgestalterin verbinde ich technisches Verständnis mit intuitivem UX/UI Design, um ganzheitliche Erlebnisse zu schaffen.
+        </p>
+      </div>
+      <div class="about-photo" data-aos="fade-left" data-aos-delay="150">
+        <img src="images/julia.png" alt="Julia" />
+      </div>
+    </div>
+  </section>
+
+  <!-- ───────────── CONTACT ───────────── -->
+  <section class="contact" id="contact">
+    <h2 data-aos="fade-up">Contact</h2>
+    <div class="contact-icons" data-aos="fade-up" data-aos-delay="100">
+
+      <a href="https://www.linkedin.com/in/julia-tischler-3a8581356/" target="_blank" rel="noopener" class="contact-icon" aria-label="LinkedIn">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          <rect x="2" y="9" width="4" height="12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          <circle cx="4" cy="4" r="2" stroke="currentColor" stroke-width="1.5"/>
+        </svg>
+        <!-- <span>LinkedIn</span> -->
+      </a>
+
+      <button class="contact-icon" id="copy-mail" aria-label="E-Mail kopieren">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="2" y="4" width="20" height="16" rx="2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M2 7l10 7 10-7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <!-- <span id="copy-label">juliatischler02@gmx.de</span> -->
+      </button>
+
+    </div>
+  </section>
+
+  <!-- ───────────── FOOTER ───────────── -->
+  <footer class="footer">
+    <p>&copy; 2026 Julia · Portfolio</p>
+  </footer>
+
+  <!-- AOS Scroll-Animationen -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({ once: true });
+
+    // E-Mail kopieren
+    document.getElementById('copy-mail').addEventListener('click', () => {
+      navigator.clipboard.writeText('juliatischler02@gmx.de').then(() => {
+        const label = document.getElementById('copy-label');
+        label.textContent = 'Kopiert!';
+        setTimeout(() => label.textContent = 'juliatischler02@gmx.de', 2000);
+      });
+    });
+
+    // Hamburger Menü
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.querySelector('.nav-links');
+    hamburger.addEventListener('click', () => {
+      navLinks.classList.toggle('open');
+      hamburger.classList.toggle('active');
+    });
+  </script>
+
+</body>
+</html>
